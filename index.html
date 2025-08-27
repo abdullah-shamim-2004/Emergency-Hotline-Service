@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main>
+      <!-- nav-bar  -->
+      <nav class="h-[100px] w-full flex justify-between px-[60px] py-[12px]">
+        <div class="left-nav-item flex justify-center items-center">
+          <img class="h-[50px] w-[50px]" src="./assets/logo.png" alt="" />
+          <h1 class="text-[#006747] text-xl font-bold ml-3">
+            Emergency <br />Service
+          </h1>
+        </div>
+        <div class="right-nav-item flex justify-center items-center">
+          <div
+            class="text-center flex px-[12px] py-[12px] bg-[#ecfff0] border-2 border-amber-500 text-black font-bold rounded-2xl mr-6"
+          >
+            <span class="mr-[10px]">0</span>
+            <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="" />
+          </div>
+          <div
+            class="text-center flex px-[20px] py-[12px] bg-[#ecfff0] border-2 border-amber-500 text-black font-bold rounded-2xl mr-6"
+          >
+            <span class="mr-[10px]">100</span>
+            <img class="w-[24px] h-[24px]" src="./assets/coin.png" alt="" />
+          </div>
+          <div
+            class="text-center flex px-[36px] py-[12px] border-2 border-amber-500 font-bold rounded-2xl bg-[#00a63e]"
+          >
+            <button class="text-white"><span>0</span> Copy</button>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero section -->
+      <div
+        class="hero-section h-[250px] bg-[#006143] w-full px-[60px] py-[12px]"
+      >
+        <div class="flex justify-center items-center text-center flex-col">
+          <img class="w-[92px] h-[92px]" src="./assets/logo-dark.png" alt="" />
+          <h1 class="font-black text-[40px] text-white mt-2">
+            Emergency Service Directory
+          </h1>
+          <p class="text-white text-[20px] mt-2">
+            Government Emergency Services at Your Fingertip – A Project by
+            Government of the People’s Republic of Bangladesh
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
