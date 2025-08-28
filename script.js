@@ -12,29 +12,42 @@ loveBtn.forEach((btn) => {
 });
 
 // Function for call
+const now = new Date();
+const timeString = now.toLocaleTimeString();
+
 let coins = 100;
+const navCoin = document.querySelector(".coin");
+
 const container = document.querySelector(".right-container");
 
 const callBtn = document.querySelectorAll(".call-btn");
 callBtn.forEach((call) => {
   call.addEventListener("click", () => {
-    const serviceName = call.getAttribute("data-service");
-    const serviceNumber = call.getAttribute("data-number");
-    alert(`Calling ${serviceName} ${serviceNumber}`);
+    coins -= 20;
+    navCoin.innerText = coins;
 
-    let card = document.createElement("div");
-    card.className =
-      "flex justify-between items-center border-2 bg-[#fafafa] rounded-2xl p-4 w-full h-[80px]";
+    if (coins >= 0) {
+      const serviceName = call.getAttribute("data-service");
+      const serviceNumber = call.getAttribute("data-number");
+      alert(`Calling ${serviceName} ${serviceNumber}`);
 
-    card.innerHTML = `
+      let card = document.createElement("div");
+      card.className =
+        "flex justify-between items-center border-2 bg-[#fafafa] rounded-2xl p-4 w-full h-[80px]";
+
+      card.innerHTML = `
     <div>
       <h4 class="text-[18px] max-[576px]:text-[16px]">${serviceName}</h4>
       <p class="text-[#5c5c5c]">${serviceNumber}</p>
     </div>
     <div>
-      <span class="text-[18px] max-[576px]:text-[16px]">"hi"</span>
+      <span class="text-[18px] max-[576px]:text-[16px]">${timeString}</span>
     </div>
   `;
-    container.appendChild(card);
+      container.appendChild(card);
+    } else {
+      navCoin.innerText = "0";
+      alert("sorry");
+    }
   });
 });
