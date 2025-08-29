@@ -11,14 +11,12 @@ loveBtn.forEach((btn) => {
   });
 });
 
-// Function for call
-const now = new Date();
-const timeString = now.toLocaleTimeString();
+// Function for call history
 
 let coins = 100;
 const navCoin = document.querySelector(".coin");
 
-const container = document.querySelector(".right-container");
+const historyList = document.querySelector(".history-list");
 
 const callBtn = document.querySelectorAll(".call-btn");
 callBtn.forEach((call) => {
@@ -27,13 +25,15 @@ callBtn.forEach((call) => {
     navCoin.innerText = coins;
 
     if (coins >= 0) {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
       const serviceName = call.getAttribute("data-service");
       const serviceNumber = call.getAttribute("data-number");
       alert(`Calling ${serviceName} ${serviceNumber}`);
 
       let card = document.createElement("div");
       card.className =
-        "flex justify-between items-center border-2 bg-[#fafafa] rounded-2xl p-4 w-full h-[80px]";
+        "flex justify-between items-center bg-[#fafafa] rounded-2xl p-4 w-full h-[80px]";
 
       card.innerHTML = `
     <div>
@@ -44,10 +44,17 @@ callBtn.forEach((call) => {
       <span class="text-[18px] max-[576px]:text-[16px]">${timeString}</span>
     </div>
   `;
-      container.appendChild(card);
+      historyList.prepend(card);
     } else {
       navCoin.innerText = "0";
       alert("sorry");
     }
   });
+});
+
+// Function for clear call history
+
+const clearHistory = document.querySelector(".clear-btn");
+clearHistory.addEventListener("click", () => {
+  historyList.innerHTML = "";
 });
