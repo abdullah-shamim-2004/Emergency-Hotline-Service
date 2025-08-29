@@ -47,7 +47,9 @@ callBtn.forEach((call) => {
       historyList.prepend(card);
     } else {
       navCoin.innerText = "0";
-      alert("sorry");
+      alert(
+        "Sorry, You don't have enough Coin. You need at least 20 coins for call"
+      );
     }
   });
 });
@@ -57,4 +59,20 @@ callBtn.forEach((call) => {
 const clearHistory = document.querySelector(".clear-btn");
 clearHistory.addEventListener("click", () => {
   historyList.innerHTML = "";
+});
+
+// Function for copy hotline number
+let copyCount = 0;
+const copyBtn = document.querySelectorAll(".copy-btn");
+const copyCountBtn = document.querySelector(".copy-count");
+
+copyBtn.forEach((copy) => {
+  copy.addEventListener("click", () => {
+    const serviceNumber = copy.getAttribute("data-number");
+    navigator.clipboard.writeText(serviceNumber).then(() => {
+      alert(`Copied Service number: ${serviceNumber}`);
+      copyCount++;
+      copyCountBtn.innerText = copyCount;
+    });
+  });
 });

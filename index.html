@@ -59,7 +59,9 @@
           <div
             class="text-center flex px-[36px] py-[12px] border-2 border-amber-500 font-bold rounded-2xl bg-[#00a63e] max-[576px]:px-[8px] max-[576px]:py-[8px] max-[576px]:rounded-xl max-[576px]:mr-2"
           >
-            <button class="text-white"><span>0</span> Copy</button>
+            <button class="text-white">
+              <span class="copy-count">0</span> Copy
+            </button>
           </div>
         </div>
       </nav>
@@ -123,8 +125,11 @@
                 </button>
               </div>
               <div class="button flex gap-2">
-                <button class="btn p-4 flex-1/2 rounded-xl">
-                  <i class="fa-regular fa-copy copy-btn"></i>Copy
+                <button
+                  class="btn copy-btn p-4 flex-1/2 rounded-xl"
+                  data-number="999"
+                >
+                  <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
                   class="btn p-4 bg-[#00a63e] text-white flex-1/2 rounded-xl call-btn cursor-pointer"
@@ -143,7 +148,9 @@
                   src="./assets/police.png "
                   alt=""
                 />
-                <span><i class="fa-regular fa-heart love-btn"></i></span>
+                <span
+                  ><i class="fa-regular fa-heart love-btn cursor-pointer"></i
+                ></span>
               </div>
               <div class="top-middle">
                 <h2 class="text-2xl font-[400] g-font max-[576px]:text-xl">
@@ -162,13 +169,18 @@
                 </button>
               </div>
               <div class="button flex gap-2">
-                <button class="btn p-4 flex-1/2 rounded-xl">
-                  <i class="fa-regular fa-copy copy-btn"></i>Copy
+                <button
+                  class="btn copy-btn p-4 flex-1/2 rounded-xl"
+                  data-number="999"
+                >
+                  <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn p-4 bg-[#00a63e] text-white flex-1/2 rounded-xl"
+                  class="btn call-btn p-4 bg-[#00a63e] text-white flex-1/2 rounded-xl"
+                  data-service="Police Helpline Service"
+                  data-number="999"
                 >
-                  <i class="fa-solid fa-phone call-btn"></i>Call
+                  <i class="fa-solid fa-phone"></i>Call
                 </button>
               </div>
             </div>
@@ -200,8 +212,8 @@
                 </button>
               </div>
               <div class="button flex gap-2">
-                <button class="btn p-4 flex-1/2 rounded-xl">
-                  <i class="fa-regular fa-copy copy-btn"></i>Copy
+                <button class="btn copy-btn p-4 flex-1/2 rounded-xl">
+                  <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
                   class="btn p-4 bg-[#00a63e] text-white flex-1/2 rounded-xl"
@@ -239,8 +251,8 @@
                 </button>
               </div>
               <div class="button flex gap-2">
-                <button class="btn p-4 flex-1/2 rounded-xl">
-                  <i class="fa-regular fa-copy copy-btn"></i>Copy
+                <button class="btn copy-btn p-4 flex-1/2 rounded-xl">
+                  <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
                   class="btn p-4 bg-[#00a63e] text-white flex-1/2 rounded-xl"
