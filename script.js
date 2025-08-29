@@ -48,7 +48,7 @@ callBtn.forEach((call) => {
     } else {
       navCoin.innerText = "0";
       alert(
-        "Sorry, You don't have enough Coin. You need at least 20 coins for call"
+        "Sorry, You don't have enough Coin. You need at least 20 coins for call."
       );
     }
   });
