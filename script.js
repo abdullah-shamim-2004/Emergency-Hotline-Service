@@ -29,7 +29,7 @@ callBtn.forEach((call) => {
       const timeString = now.toLocaleTimeString();
       const serviceName = call.getAttribute("data-service");
       const serviceNumber = call.getAttribute("data-number");
-      alert(`Calling ${serviceName} ${serviceNumber}`);
+      alert(`Calling ${serviceName} ${serviceNumber}...`);
 
       let card = document.createElement("div");
       card.className =
